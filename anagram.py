@@ -12,7 +12,6 @@ def anagram(str1, str2):
     # create a dict to hold key, value pairs ex. -> { a:1, b:0, c:1 }
     counter = {}
 
-    
     # iterate through letters in first string
     for letter in str1:
         # is the letter in the counter dict?
@@ -27,7 +26,7 @@ def anagram(str1, str2):
     for letter in str2:
         # is the letter in the counter dict?
         if letter in counter:
-            # YES..? subtract one to count
+            # YES..? subtract one from count
             counter[letter] -= 1
         else:
             # NO..? strings are not anagrams (return False)
