@@ -47,3 +47,5 @@ def pair_sum(arr,k):
 
 pair_sum([1, 3, 2, 2], 4)
 pair_sum([1, 3, 2, 2, 4, 0], 4)
+
+(code here)=>
