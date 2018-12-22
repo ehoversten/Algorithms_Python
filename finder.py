@@ -1,3 +1,10 @@
+'''
+Find missing element:
+
+Given a sorted array, a second array is formed by shuffeling the elements and deleting one element. Given two arrays find the missing element
+
+'''
+
 import collections
 
 def finder(arr1, arr2):
