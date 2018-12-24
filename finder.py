@@ -7,7 +7,7 @@ Given a sorted array, a second array is formed by shuffeling the elements and de
 
 import collections
 
-def finder(arr1, arr2):
+def finder2(arr1, arr2):
 
     # Using default dict to avoid key errors
     counter = collections.defaultdict(int)
@@ -27,40 +27,30 @@ def finder(arr1, arr2):
             counter[num] -= 1
     
 
-# def finder(arr1, arr2):
-#     count_1 = {}
-#     count_2 = {}
+def finder(arr1, arr2):
+    count_1 = {}
+    count_2 = {}
 
-#     for elem in arr1:
-#         if elem not in count_1:
-#             count_1[elem] = 1
-#         else:
-#             count_1[elem] += 1
+    for elem in arr1:
+        if elem not in count_1:
+            count_1[elem] = 1
+        else:
+            count_1[elem] += 1
     
-#     print("Dict1: " , count_1)
+    print("Dict1: " , count_1)
 
-#     for elem in arr2:
-#         if elem not in count_2:
-#             count_2[elem] = 1
-#         else:
-#             count_2[elem] += 1
+    for elem in arr2:
+        if elem not in count_2:
+            count_2[elem] = 1
+        else:
+            count_2[elem] += 1
 
-#     print("Dict2: ", count_2)
+    print("Dict2: ", count_2)
 
-
-    # for num in arr2:
-    #     if num not in count_1:
-    #         count_1[num] = 1
-    #     else:
-    #         count_1[num] += 1
-
-    ### THROWS ERROR ??? Not sure yet why this throws a KeyError
-    # for num in arr1:
-    #     if(count_1[num]==0):
-    #         print(num, "is missing")
-    #         return num
-    #     else: 
-    #         count_1[num] -= 1
+    for key in count_1.keys():
+        if key not in count_2:
+            print(key, " not in array 2")
+            return key
 
 
 #     return ("Error")
@@ -72,3 +62,4 @@ arr2 = [2, 5, 7, 3, 5, 1, 10, 8, 9, 4] # missing 6
 # arr2 = [2, 4, 3, 5] # missing 3
 
 finder(arr1, arr2)
+finder2(arr1, arr2)
